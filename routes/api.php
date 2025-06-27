@@ -204,12 +204,6 @@ Route::prefix('admin')->middleware(['auth:api', RoleMiddleware::class . ':admin'
     Route::put('/khoa/{id}', [KhoaController::class, 'update']);
     Route::delete('/khoa/{id}', [KhoaController::class, 'destroy']);
 });
-//xin chào phanh 
-Route::prefix('admin')->middleware(['auth:api', RoleMiddleware::class . ':admin'])->group(function () {
-    // ✅ Route cho bảng khoa
-    Route::get('/dskhoa', [KhoaController::class, 'index']);
-
-
 
 
 
